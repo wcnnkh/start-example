@@ -6,6 +6,8 @@ import scw.db.DB;
 import scw.env.SystemEnvironment;
 import scw.http.server.cors.Cors;
 import scw.http.server.cors.CorsRegistry;
+import scw.http.server.resource.DefaultStaticResourceLoader;
+import scw.http.server.resource.StaticResourceLoader;
 import scw.mvc.annotation.Controller;
 import scw.sqlite.SQLiteDB;
 
@@ -53,5 +55,16 @@ public class ExampleApplication {
 		CorsRegistry corsRegistry = new CorsRegistry();
 		corsRegistry.addMapping("/*", Cors.DEFAULT);
 		return corsRegistry;
+	}
+	
+	/**
+	 * 注册静态资源
+	 * @return
+	 */
+	@Bean
+	public StaticResourceLoader getStaticResourceLoader(){
+		DefaultStaticResourceLoader resourceLoader = new DefaultStaticResourceLoader();
+		resourceLoader.addMapping("/html/", "*.html");
+		return resourceLoader;
 	}
 }
