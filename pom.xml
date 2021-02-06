@@ -11,11 +11,19 @@
 	<dependencies>
 		<dependency>
 			<groupId>scw</groupId>
-			<artifactId>scw-integration</artifactId>
+			<artifactId>scw-tomcat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>scw</groupId>
+			<artifactId>scw-log4j</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>scw-app</groupId>
-			<artifactId>scw-app-integration</artifactId>
+			<artifactId>scw-app-admin-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>scw-app</groupId>
+			<artifactId>scw-app-user-service</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>scw</groupId>
