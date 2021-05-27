@@ -3,7 +3,7 @@ package scw.example;
 import scw.beans.annotation.Bean;
 import scw.boot.support.MainApplication;
 import scw.db.DB;
-import scw.env.SystemEnvironment;
+import scw.env.Sys;
 import scw.mvc.annotation.Controller;
 import scw.sqlite.SQLiteDB;
 import scw.web.cors.Cors;
@@ -41,7 +41,7 @@ public class ExampleApplication {
 	 */
 	@Bean
 	public DB getDB() {
-		return new SQLiteDB(SystemEnvironment.getInstance().getWorkPath()
+		return new SQLiteDB(Sys.env.getWorkPath()
 				+ "/scw-app-example.db");
 	}
 
