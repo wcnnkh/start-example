@@ -3,13 +3,13 @@ package scw.example;
 import scw.beans.annotation.Bean;
 import scw.boot.support.MainApplication;
 import scw.db.DB;
-import scw.env.SystemEnvironment;
-import scw.http.server.cors.Cors;
-import scw.http.server.cors.CorsRegistry;
-import scw.http.server.resource.DefaultStaticResourceLoader;
-import scw.http.server.resource.StaticResourceLoader;
+import scw.env.Sys;
 import scw.mvc.annotation.Controller;
 import scw.sqlite.SQLiteDB;
+import scw.web.cors.Cors;
+import scw.web.cors.CorsRegistry;
+import scw.web.resource.DefaultStaticResourceLoader;
+import scw.web.resource.StaticResourceLoader;
 
 @Controller
 public class ExampleApplication {
@@ -41,7 +41,7 @@ public class ExampleApplication {
 	 */
 	@Bean
 	public DB getDB() {
-		return new SQLiteDB(SystemEnvironment.getInstance().getWorkPath()
+		return new SQLiteDB(Sys.env.getWorkPath()
 				+ "/scw-app-example.db");
 	}
 
