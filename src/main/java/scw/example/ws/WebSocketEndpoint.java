@@ -10,6 +10,7 @@ import javax.websocket.server.ServerEndpoint;
 import scw.logger.Logger;
 import scw.logger.LoggerFactory;
 
+
 @ServerEndpoint(value="/websocket")
 public class WebSocketEndpoint extends Endpoint{
 	private static Logger logger = LoggerFactory.getLogger(WebSocketEndpoint.class);
