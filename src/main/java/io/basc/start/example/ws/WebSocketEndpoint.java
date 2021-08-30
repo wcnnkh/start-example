@@ -1,4 +1,4 @@
-package scw.example.ws;
+package io.basc.start.example.ws;
 
 import javax.websocket.CloseReason;
 import javax.websocket.Endpoint;
@@ -7,8 +7,8 @@ import javax.websocket.OnMessage;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import scw.logger.Logger;
-import scw.logger.LoggerFactory;
+import io.basc.framework.logger.Logger;
+import io.basc.framework.logger.LoggerFactory;
 
 
 @ServerEndpoint(value="/websocket")

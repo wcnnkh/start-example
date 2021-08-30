@@ -1,15 +1,15 @@
-package scw.example;
+package io.basc.start.example;
 
-import scw.beans.annotation.Bean;
-import scw.boot.support.MainApplication;
-import scw.db.DB;
-import scw.env.Sys;
-import scw.mvc.annotation.Controller;
-import scw.sqlite.SQLiteDB;
-import scw.web.cors.Cors;
-import scw.web.cors.CorsRegistry;
-import scw.web.resource.DefaultStaticResourceLoader;
-import scw.web.resource.StaticResourceLoader;
+import io.basc.framework.beans.annotation.Bean;
+import io.basc.framework.boot.support.MainApplication;
+import io.basc.framework.db.DB;
+import io.basc.framework.env.Sys;
+import io.basc.framework.mvc.annotation.Controller;
+import io.basc.framework.sqlite.SQLiteDB;
+import io.basc.framework.web.cors.Cors;
+import io.basc.framework.web.cors.CorsRegistry;
+import io.basc.framework.web.resource.DefaultStaticResourceLoader;
+import io.basc.framework.web.resource.StaticResourceLoader;
 
 @Controller
 public class ExampleApplication {
