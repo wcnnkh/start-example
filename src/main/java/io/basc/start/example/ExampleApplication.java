@@ -8,29 +8,30 @@ import io.basc.framework.mvc.annotation.Controller;
 import io.basc.framework.sqlite.SQLiteDB;
 import io.basc.framework.web.cors.Cors;
 import io.basc.framework.web.cors.CorsRegistry;
-import io.basc.framework.web.resource.DefaultStaticResourceLoader;
-import io.basc.framework.web.resource.StaticResourceLoader;
+import io.basc.framework.web.resource.StaticResourceRegistry;
 
 @Controller
 public class ExampleApplication {
 
 	/**
 	 * 启动后访问http://localhost:8080/hello
+	 * 
 	 * @see ExampleApplication#helloworld()
 	 * 
-	 * 因为导入了scw-app-admin-web模块，所以可以访问默认的后台管理系统(http://localhost:8080/admin)
+	 *      因为导入了scw-app-admin-web模块，所以可以访问默认的后台管理系统(http://localhost:8080/admin)
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		MainApplication.run(ExampleApplication.class, args);
 	}
-	
+
 	/**
 	 * 示例Controller
+	 * 
 	 * @return
 	 */
-	@Controller(value="hello")
-	public String helloworld(){
+	@Controller(value = "hello")
+	public String helloworld() {
 		return "hello world";
 	}
 
@@ -41,8 +42,7 @@ public class ExampleApplication {
 	 */
 	@Bean
 	public DB getDB() {
-		return new SQLiteDB(Sys.env.getWorkPath()
-				+ "/scw-app-example.db");
+		return new SQLiteDB(Sys.env.getWorkPath() + "/scw-app-example.db");
 	}
 
 	/**
@@ -56,15 +56,16 @@ public class ExampleApplication {
 		corsRegistry.addMapping("/*", Cors.DEFAULT);
 		return corsRegistry;
 	}
-	
+
 	/**
 	 * 注册静态资源
+	 * 
 	 * @return
 	 */
 	@Bean
-	public StaticResourceLoader getStaticResourceLoader(){
-		DefaultStaticResourceLoader resourceLoader = new DefaultStaticResourceLoader();
-		resourceLoader.addMapping("/html/", "*.html");
+	public StaticResourceRegistry getStaticResourceRegistry() {
+		StaticResourceRegistry resourceLoader = new StaticResourceRegistry();
+		resourceLoader.add("*.html", "/html/");
 		return resourceLoader;
 	}
 }
