@@ -18,7 +18,7 @@ public class ExampleApplication {
 	 * 
 	 * @see ExampleApplication#helloworld()
 	 * 
-	 *      因为导入了scw-app-admin-web模块，所以可以访问默认的后台管理系统(http://localhost:8080/admin)
+	 *      因为导入了start-manage-system模块，所以可以访问默认的后台管理系统(http://localhost:8080/admin)
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -42,7 +42,7 @@ public class ExampleApplication {
 	 */
 	@Bean
 	public DB getDB() {
-		return new SQLiteDB(Sys.env.getWorkPath() + "/scw-app-example.db");
+		return new SQLiteDB(Sys.env.getWorkPath() + "/start-example.db");
 	}
 
 	/**
