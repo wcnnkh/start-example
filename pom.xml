@@ -10,19 +10,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>io.basc.framework</groupId>
-			<artifactId>tomcat</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.basc.framework</groupId>
 			<artifactId>log4j</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.basc.start</groupId>
-			<artifactId>start-manage-system</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.basc.start</groupId>
-			<artifactId>start-user-service-impl</artifactId>
+			<artifactId>start-simple-app</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.basc.framework</groupId>
