@@ -6,8 +6,6 @@ import io.basc.framework.db.DB;
 import io.basc.framework.env.Sys;
 import io.basc.framework.mvc.annotation.Controller;
 import io.basc.framework.sqlite.SQLiteDB;
-import io.basc.framework.web.cors.Cors;
-import io.basc.framework.web.cors.CorsRegistry;
 import io.basc.framework.web.resource.StaticResourceRegistry;
 
 @Controller
@@ -43,18 +41,6 @@ public class ExampleApplication {
 	@Bean
 	public DB getDB() {
 		return new SQLiteDB(Sys.env.getWorkPath() + "/start-example.db");
-	}
-
-	/**
-	 * 注册跨域路径
-	 * 
-	 * @return
-	 */
-	@Bean
-	public CorsRegistry getCorsRegistry() {
-		CorsRegistry corsRegistry = new CorsRegistry();
-		corsRegistry.addMapping("/*", Cors.DEFAULT);
-		return corsRegistry;
 	}
 
 	/**
