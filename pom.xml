@@ -26,7 +26,15 @@
 		</dependency>
 		<dependency>
 			<groupId>io.basc.framework</groupId>
+			<artifactId>swagger</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.basc.framework</groupId>
 			<artifactId>sqlite</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.basc.start</groupId>
+			<artifactId>tencent</artifactId>
 		</dependency>
 		
 		<dependency>
