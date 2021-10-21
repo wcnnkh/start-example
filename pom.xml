@@ -33,11 +33,6 @@
 			<artifactId>sqlite</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.basc.start</groupId>
-			<artifactId>tencent</artifactId>
-		</dependency>
-		
-		<dependency>
 			<groupId>io.basc.framework</groupId>
 			<artifactId>testing</artifactId>
 		</dependency>
