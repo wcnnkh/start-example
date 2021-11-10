@@ -4,11 +4,11 @@ import io.basc.framework.beans.annotation.Bean;
 import io.basc.framework.boot.support.MainApplication;
 import io.basc.framework.db.DB;
 import io.basc.framework.env.Sys;
-import io.basc.framework.mvc.annotation.Controller;
 import io.basc.framework.sqlite.SQLiteDB;
+import io.basc.framework.web.pattern.annotation.RequestMapping;
 import io.basc.framework.web.resource.StaticResourceRegistry;
 
-@Controller
+@RequestMapping
 public class ExampleApplication {
 
 	/**
@@ -28,7 +28,7 @@ public class ExampleApplication {
 	 * 
 	 * @return
 	 */
-	@Controller(value = "hello")
+	@RequestMapping(value = "hello")
 	public String helloworld() {
 		return "hello world";
 	}
