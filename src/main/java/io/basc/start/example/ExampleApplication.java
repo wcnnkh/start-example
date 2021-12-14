@@ -1,14 +1,19 @@
 package io.basc.start.example;
 
+import javax.servlet.annotation.MultipartConfig;
+
 import io.basc.framework.beans.annotation.Bean;
 import io.basc.framework.boot.support.MainApplication;
 import io.basc.framework.db.DB;
 import io.basc.framework.env.Sys;
+import io.basc.framework.io.FileUtils;
 import io.basc.framework.sqlite.SQLiteDB;
+import io.basc.framework.upload.Uploader;
 import io.basc.framework.web.pattern.annotation.RequestMapping;
 import io.basc.framework.web.resource.StaticResourceRegistry;
 
 @RequestMapping
+@MultipartConfig
 public class ExampleApplication {
 
 	/**
@@ -53,5 +58,10 @@ public class ExampleApplication {
 		StaticResourceRegistry resourceLoader = new StaticResourceRegistry();
 		resourceLoader.add("*.html", "/html/");
 		return resourceLoader;
+	}
+
+	@Bean
+	public Uploader getUploader() {
+		return new Uploader(FileUtils.getTempDirectory());
 	}
 }
