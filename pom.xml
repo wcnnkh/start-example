@@ -10,7 +10,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>io.basc.framework</groupId>
-			<artifactId>log4j</artifactId>
+			<artifactId>log4j2</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>io.basc.start</groupId>
