@@ -59,7 +59,7 @@
 					<archive>
 						<manifest>
 							<!-- 主程序入口类 -->
-							<mainClass>scw.example.ExampleApplication</mainClass>
+							<mainClass>io.basc.start.example.ExampleApplication</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
