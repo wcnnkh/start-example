@@ -2,8 +2,8 @@ package io.basc.start.example;
 
 import javax.servlet.annotation.MultipartConfig;
 
-import io.basc.framework.beans.annotation.Bean;
 import io.basc.framework.boot.support.MainApplication;
+import io.basc.framework.context.annotation.Bean;
 import io.basc.framework.db.DB;
 import io.basc.framework.env.Sys;
 import io.basc.framework.io.FileUtils;
@@ -45,7 +45,7 @@ public class ExampleApplication {
 	 */
 	@Bean
 	public DB getDB() {
-		return new SQLiteDB(Sys.env.getWorkPath() + "/start-example.db");
+		return new SQLiteDB(Sys.getEnv().getWorkPath() + "/start-example.db");
 	}
 
 	/**
