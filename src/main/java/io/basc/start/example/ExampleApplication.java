@@ -2,6 +2,7 @@ package io.basc.start.example;
 
 import javax.servlet.annotation.MultipartConfig;
 
+import io.basc.framework.boot.annotation.BootApplication;
 import io.basc.framework.boot.support.MainApplication;
 import io.basc.framework.context.annotation.Bean;
 import io.basc.framework.db.DB;
@@ -14,6 +15,7 @@ import io.basc.framework.web.resource.StaticResourceRegistry;
 
 @RequestMapping
 @MultipartConfig
+@BootApplication
 public class ExampleApplication {
 
 	/**
